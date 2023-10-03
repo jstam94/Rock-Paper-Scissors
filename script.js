@@ -24,33 +24,34 @@ function firstLetterCap(string) {
 // function roundDraw(){
 //     return `It's a draw!!!`;
 // }
-
+function roundWin(){
+    return `You Win! ${playerSelection} beats ${computerSelection}.`;
+}
+function roundLoss(){
+    return `You Lose :(! ${playerSelection} beats ${computerSelection}.`
+}
+function roundDraw(){
+    return `It's a draw!!!`;
+}
 function playRound(playerSelection, computerSelection){
-    function roundWin(){
-        return `You Win! ${playerSelection} beats ${computerSelection}.`;
-    }
-    function roundLoss(){
-        return `You Lose :(! ${playerSelection} beats ${computerSelection}.`
-    }
-    function roundDraw(){
-        return `It's a draw!!!`;
-    }
-    PlayerSelection = firstLetterCap(playerSelection);
-    if (PlayerSelection === computerSelection){
-        roundDraw();
+    playerSelection = firstLetterCap(playerSelection);
+    if (playerSelection === computerSelection){
+        return roundDraw();
     } else if (playerSelection === 'Rock'){
         if (computerSelection === 'Scissors'){
-            roundWin();
-        } else roundLoss();
+           return roundWin();
+        } else return roundLoss();
     } else if (playerSelection === 'Paper'){
         if (computerSelection === 'Rock'){
-            roundWin();
-        } else roundLoss();
+           return roundWin();
+        } else return roundLoss();
     } else if (playerSelection === 'Scissors'){
         if (computerSelection === 'Paper'){
-            roundWin();
-        } else roundLoss();
+            return roundWin();
+        } else return roundLoss();
     }
 }
 
-console.log(playRound('rock', 'rock'));
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
