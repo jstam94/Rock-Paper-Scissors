@@ -1,2 +1,2 @@
-# Rock-Paper-Scissors
+# rock-paper-scissors
 Rock Paper Scissors - Odin Project - JavaScript Practice
