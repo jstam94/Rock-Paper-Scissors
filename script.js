@@ -5,4 +5,21 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-console.log(getComputerChoice())
+// console.log(getComputerChoice())
+
+
+function playRound(playerSelection, computerSelection){
+
+}
+
+
+
+function firstLetterCap(string) {
+    string = string.toLowerCase();
+    let firstLetter = (string.charAt(0)).toUpperCase();
+    let endOfWord =  string.slice(1, string.length)
+    let normalString = firstLetter + endOfWord
+    return normalString;
+}
+
+console.log(firstLetterCap('rOcK'))
