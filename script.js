@@ -33,6 +33,7 @@ function roundLoss(){
 function roundDraw(){
     return `It's a draw!!!`;
 }
+
 function playRound(playerSelection, computerSelection){
     playerSelection = firstLetterCap(playerSelection);
     if (playerSelection === computerSelection){
@@ -52,6 +53,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+f
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
