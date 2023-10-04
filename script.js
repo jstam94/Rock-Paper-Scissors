@@ -46,27 +46,26 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-let playerSelection = prompt('Rock, Paper, Scissors');
-let computerSelection = getComputerChoice();
+function game(){
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Score: ${playerScore} - ${computerScore}`);
 
-playerSelection = prompt('Round Two xD');
+playerSelection = firstLetterCap(prompt('Round Two xD'));
 computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Score: ${playerScore} - ${computerScore}`);
 
-playerSelection = prompt('Round Three');
+playerSelection = firstLetterCap(prompt('Round Three'));
 computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Score: ${playerScore} - ${computerScore}`);
 
-playerSelection = prompt('Round Four');
+playerSelection = firstLetterCap(prompt('Round Four'));
 computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Score: ${playerScore} - ${computerScore}`);
 
-playerSelection = prompt('Last Round!!!!!!');
+playerSelection = firstLetterCap(prompt('Last Round!!!!!!'));
 computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Score: ${playerScore} - ${computerScore}`);
@@ -78,3 +77,8 @@ if (playerScore === computerScore){
 } else if (computerScore > playerScore){
     console.log(`Final Result: You Lose. NT NT GGs :(`)
 }
+}
+
+let playerSelection = firstLetterCap(prompt('Rock, Paper, Scissors'));
+let computerSelection = getComputerChoice();
+game()
