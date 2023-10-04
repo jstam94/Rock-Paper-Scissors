@@ -1,10 +1,13 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function roundWin(){
     playerScore += 1;
     return `You Win! ${playerSelection} beats ${computerSelection}.`;
 }
 function roundLoss(){
     computerScore +=1;
-    return `You Lose :(! ${playerSelection} beats ${computerSelection}.`
+    return `You Lose :(! ${computerSelection} beats ${playerSelection}.`
 }
 function roundDraw(){
     return `It's a draw!!!`;
@@ -43,19 +46,35 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+let playerSelection = prompt('Rock, Paper, Scissors');
 let computerSelection = getComputerChoice();
-let playerSelection = prompt('Rock, Paper or Scissors? ;D')
-let playerScore = 0;
-let computerScore = 0;
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Score: ${playerScore} - ${computerScore}`);
 
-function game(){
-    while (playerScore < 5 || computerScore < 5){
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Current Score is ${playerScore} - ${computerScore}`)
-    }
-    if (playerScore = 5) {
-        return `Victory!!!!`
-    } else return 'L Bozo :(, try again by refreshing '
+playerSelection = prompt('Round Two xD');
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Score: ${playerScore} - ${computerScore}`);
+
+playerSelection = prompt('Round Three');
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Score: ${playerScore} - ${computerScore}`);
+
+playerSelection = prompt('Round Four');
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Score: ${playerScore} - ${computerScore}`);
+
+playerSelection = prompt('Last Round!!!!!!');
+computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+console.log(`Score: ${playerScore} - ${computerScore}`);
+
+if (playerScore === computerScore){
+    console.log('Final Result: Draw...')
+} else if (playerScore > computerScore){
+    console.log('Final Result: Victory!!!!')
+} else if (computerScore > playerScore){
+    console.log(`Final Result: You Lose. NT NT GGs :(`)
 }
-
-console.log(game())
