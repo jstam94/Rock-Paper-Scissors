@@ -16,7 +16,7 @@ function playRound(playerSelection){
     }
     roundLoss = () => {
         computerScore +=1;
-        return `Round Lossgi :(! ${computerSelection} beats ${playerSelection}.`
+        return `Round Loss :(! ${computerSelection} beats ${playerSelection}.`
      }
     roundDraw = () =>{
         return `It's a draw!!!`;
