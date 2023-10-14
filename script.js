@@ -12,11 +12,11 @@ function playRound(playerSelection){
 
     roundWin = () => {
         playerScore += 1;
-        return `You Win! ${playerSelection} beats ${computerSelection}.`;
+        return `Round Win! ${playerSelection} beats ${computerSelection}.`;
     }
     roundLoss = () => {
         computerScore +=1;
-        return `You Lose :(! ${computerSelection} beats ${playerSelection}.`
+        return `Round Lossgi :(! ${computerSelection} beats ${playerSelection}.`
      }
     roundDraw = () =>{
         return `It's a draw!!!`;
@@ -48,5 +48,15 @@ console.log(buttons)
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         roundResults.textContent = playRound(button.textContent);
-        gameResults.textContent = `Current Score is ${playerScore} - ${computerScore}`
+        gameResults.textContent = `Current Score is ${playerScore} - ${computerScore}`;
+        evaluateScore();
 })})
+
+
+function evaluateScore(){
+    if(playerScore == 5){
+        gameResults.textContent = `PLAYER WINS!!! xD Final score is ${playerScore} - ${computerScore}. Refresh to play again`;
+    } else if(computerScore == 5){
+        gameResults.textContent = `player loses :'( Final score is ${playerScore} - ${computerScore}. Refresh to play again`;
+    }
+}
