@@ -40,7 +40,8 @@ function playRound(playerSelection){
         }
     }
 
-
-const rock = document.querySelector('#rock')
-
-rock.addEventListener('click', () => console.log(playRound(rock.textContent)));
+let buttons = document.querySelectorAll('#container button')
+console.log(buttons)
+buttons.forEach((button) => {
+    button.addEventListener('click', () => console.log(playRound(button.textContent)))
+})
