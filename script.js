@@ -40,8 +40,13 @@ function playRound(playerSelection){
         }
     }
 
-let buttons = document.querySelectorAll('#container button')
+let roundResults = document.querySelector('#round-result')
+let gameResults = document.querySelector('#game-results')
+let buttons = document.querySelectorAll('#buttons button')
 console.log(buttons)
+
 buttons.forEach((button) => {
-    button.addEventListener('click', () => console.log(playRound(button.textContent)))
-})
+    button.addEventListener('click', () => {
+        roundResults.textContent = playRound(button.textContent);
+        gameResults.textContent = `Current Score is ${playerScore} - ${computerScore}`
+})})
