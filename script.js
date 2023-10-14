@@ -9,7 +9,7 @@ function playRound(playerSelection){
     }
 
     let computerSelection = computerRoll();
-    
+
     roundWin = () => {
         playerScore += 1;
         return `You Win! ${playerSelection} beats ${computerSelection}.`;
@@ -41,4 +41,6 @@ function playRound(playerSelection){
     }
 
 
-console.log(playRound('Scissors'));
+const rock = document.querySelector('#rock')
+
+rock.addEventListener('click', () => console.log(playRound(rock.textContent)));
